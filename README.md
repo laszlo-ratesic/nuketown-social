@@ -1,11 +1,67 @@
 
-# Solana dApp Scaffold Next
+# Nuketown Social Poster ![Current Version](https://img.shields.io/badge/Social%20Poster-v0.1.0-blueviolet)
 
-The Solana dApp Scaffold repos are meant to house good starting scaffolds for ecosystem developers to get up and running quickly with a front end client UI that integrates several common features found in dApps with some basic usage examples. Wallet Integration. State management. Components examples. Notificaitons. Setup recommendations.
+A web app that allows creating, reading, updating, and removing (not yet posted) posts to social media platforms. This will allow you the ability to manage many different accounts ideal for a business situation for Social Media Managers in mind.
 
-Responsive                     |  Desktop
-:-------------------------:|:-------------------------:
-![](scaffold-mobile.png)  |  ![](scaffold-desktop.png)
+This project is initially thought out and is being created as a replacement for my wife "A Social Media Manager" and we'll see where it goes from there.  The ideal features should look something like this
+* Clients
+   * Unlimited clients
+   * Ability to have view a specific client
+   * Ability to see all clients.
+   * Ability to search for a specific list of clients
+* Platforms
+   * Facebook
+   * Twitter
+   * LinkedIn
+* Automation
+   * Scheduling
+   * Updating
+   * Alerts
+      * Successful
+      * One Time Alerts
+      * Errors
+      * Unsuccessful
+
+This will be a long term project and welcome all contributors and feel free to take, reuse, re-purpose, submit errors, tickets, or just to say hi I am down for conversation.  =)
+
+## Direction of Stack
+* Frontend
+   * **1React
+   * UIKit
+      * SCSS Tree shaking
+   * React-Icons
+   * Lodash
+   * **2 SocketIO
+   * **2 axios
+* Backend
+   * SocketIO
+   * MongoDB - [MongoDB - https://dbdiagram.io/d/5dd7ed5eedf08a25543e3f76](https://dbdiagram.io/d/5dd7ed5eedf08a25543e3f76)
+   * [MySQL (Primary Storage) - https://dbdiagram.io/d/5dd811daedf08a25543e40b2](https://dbdiagram.io/d/5dd811daedf08a25543e40b2)
+   * Express
+		   * MicroServices to perform actions using WebSockets
+			   * Social Posts
+				   * Scheduling
+				   * Updating
+				   * Notifications during the automation process
+			   * Chats/Team Chats
+				   * Sending
+				   * Receiving
+				   * Has Read Notifications "Direct Messaging Only"
+				   * Is Typing Notifications
+   * Nginx "mainly for reverse proxy"
+   * Linux
+
+ ## Roadmap
+ ### Version 0.0.1
+ * [x] Setup React-Create-App
+ * [x] Setup Mock API Server
+ * [x] Setup SocketIO
+ * [x] Setup MySQL
+ * [ ] Setup MongoDB
+ * [ ] Setup Virtual Machine for ideal end-game server
+ * [ ] Design Login Process
+ * [ ] Design Registration Process
+
 
 ## Getting Started
 
@@ -54,7 +110,7 @@ Web3 Js: Examples of one or more uses of web3 js including a transaction with a 
 
 Sample navigation and page changing to demonstate state
 
-Clean Simple Styling 
+Clean Simple Styling
 
 Notifications (optional): Example of using a notification system
 
@@ -66,10 +122,10 @@ A Solana Components Repo will be released in the near future to house a common c
 ### Structure
 
 The scaffold project structure may vary based on the front end framework being utilized. The below is an example structure for the Next js Scaffold.
- 
+
 ```
 ├── public : publically hosted files
-├── src : primary code folders and files 
+├── src : primary code folders and files
 │   ├── components : should house anything considered a resuable UI component
 │   ├── contexts` : any context considered reusable and useuful to many compoennts that can be passed down through a component tree
 │   ├── hooks` : any functions that let you 'hook' into react state or lifecycle features from function components
@@ -85,7 +141,7 @@ style, package, configuration, and other project files
 
 ## Contributing
 
-Anyone is welcome to create an issue to build, discuss or request a new feature or update to the existing code base. Please keep in mind the following when submitting an issue. We consider merging high value features that may be utilized by the majority of scaffold users. If this is not a common feature or fix, consider adding it to the component library or cookbook. Please refer to the project's architecture and style when contributing. 
+Anyone is welcome to create an issue to build, discuss or request a new feature or update to the existing code base. Please keep in mind the following when submitting an issue. We consider merging high value features that may be utilized by the majority of scaffold users. If this is not a common feature or fix, consider adding it to the component library or cookbook. Please refer to the project's architecture and style when contributing.
 
 If submitting a feature, please reference the project structure shown above and try to follow the overall architecture and style presented in the existing scaffold.
 
@@ -104,10 +160,10 @@ The general flow for making a contribution:
 4. Push your work back up to your fork
 5. Submit a Pull request so that we can review your changes
 
-**NOTE**: Be sure to merge the latest from "upstream" before making a 
+**NOTE**: Be sure to merge the latest from "upstream" before making a
 pull request!
 
-You can find tasks on the [project board](https://github.com/solana-dev-adv/solana-dapp-next/projects/1) 
+You can find tasks on the [project board](https://github.com/solana-dev-adv/solana-dapp-next/projects/1)
 or create an issue and assign it to yourself.
 
 
