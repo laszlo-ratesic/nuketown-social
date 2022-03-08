@@ -10,7 +10,7 @@ export const SignMessage: FC = () => {
 
   const onClick = useCallback(async (event) => {
       event.preventDefault();
-      const input = document.getElementById('post');
+      const inputValue = (document.getElementById('post') as HTMLInputElement).value;
     try {
       // `publicKey` will be null if the wallet isn't connected
       if (!publicKey) throw new Error("Wallet not connected!");
@@ -18,7 +18,7 @@ export const SignMessage: FC = () => {
       if (!signMessage)
         throw new Error("Wallet does not support message signing!");
       // Encode anything as bytes
-      const message = new TextEncoder().encode(input.value);
+      const message = new TextEncoder().encode(inputValue);
       // Sign the bytes using the wallet
       const signature = await signMessage(message);
       // Verify that the bytes were signed using the private key that matches the known public key
