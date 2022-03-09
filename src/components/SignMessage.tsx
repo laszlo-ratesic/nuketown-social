@@ -44,7 +44,7 @@ export const SignMessage: FC = () => {
     <div>
       <form>
         <Spacer y={1}/>
-        <Input size="lg" clearable id="post" name="post" type="text" autoComplete="post" placeholder="Nukey Nukables" width="15rem" required />
+        <input id="post" type="text" placeholder="Type here" className="input input-bordered w-60 max-w-xs"/>
         <Spacer y={0.3}/>
         <button
           className="group w-60 m-2 btn animate-pulse disabled:animate-none bg-gradient-to-r from-[#9945FF] to-[#14F195] hover:from-pink-500 hover:to-yellow-500 ... "
