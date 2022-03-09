@@ -4,7 +4,6 @@ import bs58 from "bs58";
 import { FC, useCallback } from "react";
 import { sign } from "tweetnacl";
 import { notify } from "../utils/notifications";
-import { Input, Spacer } from '@nextui-org/react'
 
 export const SignMessage: FC = () => {
   const { publicKey, signMessage } = useWallet();
@@ -43,9 +42,7 @@ export const SignMessage: FC = () => {
   return (
     <div>
       <form>
-        <Spacer y={1}/>
-        <input id="post" type="text" placeholder="Type here" className="input input-bordered w-60 max-w-xs"/>
-        <Spacer y={0.3}/>
+        <input id="post" type="text" placeholder="Nukey Nukables" className="flex flex-col input input-bordered w-60 mx-auto my-2 max-w-xs"/>
         <button
           className="group w-60 m-2 btn animate-pulse disabled:animate-none bg-gradient-to-r from-[#9945FF] to-[#14F195] hover:from-pink-500 hover:to-yellow-500 ... "
           onClick={onClick}
