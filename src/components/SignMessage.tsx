@@ -4,6 +4,7 @@ import bs58 from "bs58";
 import { FC, useCallback } from "react";
 import { sign } from "tweetnacl";
 import { notify } from "../utils/notifications";
+import { Input } from '@nextui-org/react';
 
 export const SignMessage: FC = () => {
   const { publicKey, signMessage } = useWallet();
@@ -40,9 +41,9 @@ export const SignMessage: FC = () => {
   }, [publicKey, notify, signMessage]);
 
   return (
-    <div>
       <form>
-        <input id="post" name="post" type="text" autoComplete="post" className="flex flex-col m-2 w-60 text-black" required />
+      <Input id="post" name="post" type="text" autoComplete="post" className="mx-auto my-2 group-disabled:hidden" placeholder="Make history" required />
+    <div>
         <button
           className="group w-60 m-2 btn animate-pulse disabled:animate-none bg-gradient-to-r from-[#9945FF] to-[#14F195] hover:from-pink-500 hover:to-yellow-500 ... "
           onClick={onClick}
@@ -51,9 +52,11 @@ export const SignMessage: FC = () => {
           <div className="hidden group-disabled:block">
             Wallet not connected
           </div>
-          <span className="block group-disabled:hidden">Create Post</span>
+          <span className="block group-disabled:hidden">
+            Create Post
+            </span>
         </button>
-      </form>
     </div>
+      </form>
   );
 };
